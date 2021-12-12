@@ -4,11 +4,13 @@ import thunk from "redux-thunk";
 import userReducer from "./userReducer";
 import appReducer from "./appReducer";
 import categoryReducer from "./categoryReducer";
+import {modalReducer} from "./modalReducer";
 
 
 const rootReducer = combineReducers({
     user: userReducer,
     app: appReducer,
+    modal: modalReducer,
     category: categoryReducer,
 })
 

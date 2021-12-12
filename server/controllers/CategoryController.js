@@ -3,6 +3,7 @@ import CategoryService from "../services/CategoryService.js";
 class CategoryController {
     async create(req, res) {
         try {
+            console.log(req.body)
             const category = await CategoryService.create(req.body)
             res.json(category)
         } catch (e) {
@@ -33,7 +34,7 @@ class CategoryController {
             const updatedCategory = await CategoryService.update(req.body)
             return res.json(updatedCategory)
         } catch (e) {
-            res.status(500).json(e.message)
+            res.status(500).json(e)
         }
     }
 

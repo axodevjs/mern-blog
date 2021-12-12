@@ -8,18 +8,27 @@ import {getCategories} from "../../../actions/category";
 import edit from '../../../assets/images/edit.svg';
 import trash from '../../../assets/images/trash.svg';
 import EditCategory from "../../../components/Admin/Modals/EditCategory";
+import {hideModal, showModal} from "../../../reducers/modalReducer";
+import connect from "react-redux/lib/connect/connect";
+import Modal from "../../../components/Admin/Modals/Modal/Modal";
+import AddCategory from "../../../components/Admin/Modals/AddCategory";
+import Category from "./Category";
+import {setModal} from "../../../reducers/modalReducer";
 
 const Categories = () => {
     const dispatch = useDispatch()
-
     const loader = useSelector(state => state.app.loader)
     const categories = useSelector(state => state.category.categories)
+
+    const modalShow = useSelector(state => state.modal.show)
+    const titleModal = useSelector(state => state.modal.title)
+    const componentModal = useSelector(state => state.modal.component)
 
     useEffect(() => {
         dispatch(getCategories())
     }, [])
 
-    if(loader) {
+    if (loader) {
         return (
             <div>
                 loading
@@ -27,25 +36,26 @@ const Categories = () => {
         )
     }
 
-    return(
+    const AddHandler = () => {
+        dispatch(setModal("Add category", <AddCategory/>))
+        dispatch(showModal())
+    }
+
+    return (
         <AdminLayout>
+            <Modal showModal={modalShow}
+                   handleClose={() => dispatch(hideModal())}
+                   title={titleModal}
+            >
+                {componentModal}
+            </Modal>
             <S.HeaderCategories>
                 <Heading level={2}>Categories</Heading>
-                <Text cursor={"pointer"} fontSize={"18px"} fontWeight={"bold"}>+ Add new</Text>
+                <Text onClick={AddHandler} cursor={"pointer"} fontSize={"18px"} fontWeight={"bold"}>+ Add new</Text>
             </S.HeaderCategories>
             <S.BodyCategories>
-                {categories.map(file => (
-                    <S.WrapperCategory key={file._id}>
-                        <CategoryBtn style={{"display": "inline-grid", "justify-self": "start"}} color={file.color} background={file.background}>{file.name}</CategoryBtn>
-                        <S.Actions>
-                            <S.Action background={"#3354FF"}>
-                                <img src={edit} alt=""/>
-                            </S.Action>
-                            <S.Action background={"#FF3333"}>
-                                <img src={trash} alt=""/>
-                            </S.Action>
-                        </S.Actions>
-                    </S.WrapperCategory>
+                {categories.map(category => (
+                    <Category key={category._id} category={category}/>
                 ))}
             </S.BodyCategories>
         </AdminLayout>

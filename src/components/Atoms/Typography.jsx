@@ -24,6 +24,7 @@ const StyledHeading = styled.span`
   display: grid;
   text-align: ${({textAlign}) => textAlign || 'initial'};
   margin: ${({ margin }) => margin || '0'};
+  padding: ${({ padding }) => padding || '0'};
   font-weight: ${({ fontWeight }) => fontWeight || '700'};
   color: ${({ color }) => color || '#ffffff'};
   cursor: ${({cursor}) => cursor || 'auto'}

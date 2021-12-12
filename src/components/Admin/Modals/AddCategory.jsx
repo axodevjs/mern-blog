@@ -1,34 +1,25 @@
 import Input from "../../Atoms/Input";
 import Grid from "../../Atoms/Grid";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Button from "../../Atoms/Button";
 import {useDispatch} from "react-redux";
-import {hideModal, showModal} from "../../../reducers/modalReducer";
-import {putCategory} from "../../../actions/category";
+import {hideModal} from "../../../reducers/modalReducer";
+import {createCategory} from "../../../actions/category";
 
-const EditCategory = (props) => {
+const AddCategory = (props) => {
     const [name, setName] = useState("")
     const [color, setColor] = useState("")
     const [background, setBackground] = useState("")
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        setName(props.category.name)
-        setColor(props.category.color)
-        setBackground(props.category.background)
-    }, []);
-
-
-    const editHandler = () => {
-        dispatch(showModal())
+    const addHandler = () => {
         const data = {
-            "_id": props._id,
             "name": name,
             "color": color,
             "background": background
         }
-        dispatch(putCategory(data))
+        dispatch(createCategory(data))
         dispatch(hideModal())
     }
 
@@ -40,11 +31,11 @@ const EditCategory = (props) => {
 
             <Grid margin={"28px 0 0 0"} columns={"1fr"} justifyItems={"center"}>
                 <div>
-                    <Button background={"#3354FF"} justifySelf={"center"} onClick={editHandler}>Edit</Button>
+                    <Button typ background={"#3354FF"} justifySelf={"center"} onClick={addHandler}>Add</Button>
                 </div>
             </Grid>
         </Grid>
     );
 }
 
-export default EditCategory
+export default AddCategory
