@@ -1,15 +1,10 @@
 import AdminLayout from "../../../components/Admin/Layouts/AdminLayout";
 import {Heading, Text} from "../../../components/Atoms/Typography";
-import * as S from './Styled';
-import {CategoryBtn} from "../../../components/Atoms/CategoryBtn";
+import * as S from '../StyledAdmin';
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {getCategories} from "../../../actions/category";
-import edit from '../../../assets/images/edit.svg';
-import trash from '../../../assets/images/trash.svg';
-import EditCategory from "../../../components/Admin/Modals/EditCategory";
 import {hideModal, showModal} from "../../../reducers/modalReducer";
-import connect from "react-redux/lib/connect/connect";
 import Modal from "../../../components/Admin/Modals/Modal/Modal";
 import AddCategory from "../../../components/Admin/Modals/AddCategory";
 import Category from "./Category";
@@ -49,15 +44,15 @@ const Categories = () => {
             >
                 {componentModal}
             </Modal>
-            <S.HeaderCategories>
+            <S.Header>
                 <Heading level={2}>Categories</Heading>
                 <Text onClick={AddHandler} cursor={"pointer"} fontSize={"18px"} fontWeight={"bold"}>+ Add new</Text>
-            </S.HeaderCategories>
-            <S.BodyCategories>
+            </S.Header>
+            <S.Body>
                 {categories.map(category => (
                     <Category key={category._id} category={category}/>
                 ))}
-            </S.BodyCategories>
+            </S.Body>
         </AdminLayout>
     )
 }

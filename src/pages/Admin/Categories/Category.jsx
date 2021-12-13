@@ -3,15 +3,18 @@ import * as S from "./Styled";
 import {setModal, showModal} from "../../../reducers/modalReducer";
 import edit from "../../../assets/images/edit.svg";
 import trash from "../../../assets/images/trash.svg";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {delCategory} from "../../../actions/category";
 import EditCategory from "../../../components/Admin/Modals/EditCategory";
+import {updateCurrentCategory} from "../../../reducers/categoryReducer";
+
 
 const Category = (props) => {
     const dispatch = useDispatch()
 
     const EditHandler = () => {
-        dispatch(setModal("Edit category", <EditCategory category={props.category} _id={props.category._id}/>))
+        dispatch(updateCurrentCategory(props.category))
+        dispatch(setModal("Edit category", <EditCategory _id={props.category._id}/>))
         dispatch(showModal())
     }
 

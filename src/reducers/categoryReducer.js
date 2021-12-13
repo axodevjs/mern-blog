@@ -39,5 +39,4 @@ export const setCategories = (categories) => ({type: SET_CATEGORIES, payload: ca
 export const addCategory = (category) => ({type: ADD_CATEGORY, payload: category})
 export const deleteCategory = (id) => ({type: DELETE_CATEGORY, payload: id})
 export const updateCategory = (data) => ({type: UPDATE_CATEGORY, payload: data})
-
 export const updateCurrentCategory = (category) => ({type: UPDATE_CURRENT_CATEGORY, payload: category})

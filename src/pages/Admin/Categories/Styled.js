@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-export const HeaderCategories = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-`
-
-export const BodyCategories = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 26px;
-  margin-top: 42px;
-`
-
 export const WrapperCategory = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

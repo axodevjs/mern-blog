@@ -2,7 +2,7 @@ import Input from "../../Atoms/Input";
 import Grid from "../../Atoms/Grid";
 import {useEffect, useState} from "react";
 import Button from "../../Atoms/Button";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {hideModal, showModal} from "../../../reducers/modalReducer";
 import {putCategory} from "../../../actions/category";
 
@@ -11,19 +11,20 @@ const EditCategory = (props) => {
     const [color, setColor] = useState("")
     const [background, setBackground] = useState("")
 
+    const current_category = useSelector(state => state.category.currentCategory)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
-        setName(props.category.name)
-        setColor(props.category.color)
-        setBackground(props.category.background)
-    }, []);
-
+        setName(current_category.name)
+        setColor(current_category.color)
+        setBackground(current_category.background)
+    }, [current_category]);
 
     const editHandler = () => {
         dispatch(showModal())
         const data = {
-            "_id": props._id,
+            "_id": current_category._id,
             "name": name,
             "color": color,
             "background": background
