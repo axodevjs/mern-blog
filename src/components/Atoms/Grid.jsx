@@ -11,6 +11,7 @@ const StyledGrid = styled.div`
   justify-self: ${({justifySelf}) => justifySelf || 'auto'};
   margin: ${({ margin }) => margin || '0'};
   padding: ${({ padding }) => padding || '0'};
+  cursor: ${({ cursor }) => cursor || 'auto'};
 `
 
 const Grid = (props) => {
