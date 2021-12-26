@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 export const StyledOverWindow = styled.div`
   transition: 200ms;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

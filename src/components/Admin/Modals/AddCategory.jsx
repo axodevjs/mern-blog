@@ -31,7 +31,7 @@ const AddCategory = (props) => {
 
             <Grid margin={"28px 0 0 0"} columns={"1fr"} justifyItems={"center"}>
                 <div>
-                    <Button typ background={"#3354FF"} justifySelf={"center"} onClick={addHandler}>Add</Button>
+                    <Button justifySelf={"center"} onClick={addHandler}>Add</Button>
                 </div>
             </Grid>
         </Grid>

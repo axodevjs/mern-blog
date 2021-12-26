@@ -2,7 +2,7 @@ import AdminLayout from "../../../components/Admin/Layouts/AdminLayout";
 import {Heading, Text} from "../../../components/Atoms/Typography";
 import * as S from '../StyledAdmin';
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {getCategories} from "../../../actions/category";
 import {hideModal, showModal} from "../../../reducers/modalReducer";
 import Modal from "../../../components/Admin/Modals/Modal/Modal";

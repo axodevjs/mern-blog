@@ -6,9 +6,9 @@ export const Styled = styled.div`
   grid-template-rows: max-content;
   justify-items: center;
   grid-area: sidebar;
-  position: sticky; // See link
-  top: 0; //to make it stick to the top of the screen
-  height: calc(100vh - 84px); // make the height equal to 100 view height
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 84px);
   background-color: #212F3F;
 `;
 

@@ -21,9 +21,5 @@ export const TitleBlock = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
-
-  &:nth-child(1) {
-    margin-top: 0;
-  }
+  padding-bottom: 50px;
 `;

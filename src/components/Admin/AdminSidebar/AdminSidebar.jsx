@@ -3,6 +3,7 @@ import {Text} from "../../Atoms/Typography";
 import {useDispatch} from "react-redux";
 import {Link, NavLink, useNavigate} from "react-router-dom";
 import {logout} from "../../../reducers/userReducer";
+import Grid from "../../Atoms/Grid";
 
 const AdminSidebar = () => {
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ const AdminSidebar = () => {
                     <S.Nav>
                         <NavLink
                             to="/admin/posts"
-                            className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+                            className={({isActive}) => (isActive ? 'active' : 'inactive')}
                         >
                             Posts
                         </NavLink>
@@ -32,7 +33,7 @@ const AdminSidebar = () => {
                     <S.Nav>
                         <NavLink
                             to="/admin/categories"
-                            className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+                            className={({isActive}) => (isActive ? 'active' : 'inactive')}
                         >
                             Categories
                         </NavLink>
@@ -40,7 +41,7 @@ const AdminSidebar = () => {
                 </S.NavBar>
             </S.Wrapper>
             <S.Logout>
-                <Text style={{cursor: "pointer"}} onClick={() => logoutHandler() } fontSize={"18px"}>Logout</Text>
+                <Text style={{cursor: "pointer"}} onClick={() => logoutHandler()} fontSize={"18px"}>Logout</Text>
             </S.Logout>
         </S.Styled>
     )

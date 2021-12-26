@@ -10,7 +10,7 @@ import {useQuill} from 'react-quilljs';
 import {formats, modules} from "./QuillConfig";
 import Button from "../../Atoms/Button";
 
-const CreatePost = () => {
+const EditPost = () => {
     const [selectedValue, setSelectedValue] = useState("");
     const categories = useSelector(state => state.category.categories)
     const [title, setTitle] = useState("")
@@ -60,11 +60,11 @@ const CreatePost = () => {
             <Grid></Grid>
             <Grid justifyItems={"center"}>
                 <div>
-                    <Button margin={"20px 0 0 0"} primary>Create</Button>
+                    <Button margin={"20px 0 0 0"} primary>Edit</Button>
                 </div>
             </Grid>
         </Grid>
     )
 }
 
-export default CreatePost
+export default EditPost

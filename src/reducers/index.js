@@ -6,6 +6,7 @@ import appReducer from "./appReducer";
 import categoryReducer from "./categoryReducer";
 import {modalReducer} from "./modalReducer";
 import {overWindowReducer} from "./overWindowReducer";
+import postReducer from "./postReducer";
 
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     modal: modalReducer,
     overWindow: overWindowReducer,
     category: categoryReducer,
+    posts: postReducer,
 })
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
