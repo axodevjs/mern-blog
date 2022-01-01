@@ -9,7 +9,7 @@ export const Styled = styled.div`
   position: sticky;
   top: 0;
   height: calc(100vh - 84px);
-  background-color: #212F3F;
+  background-color: #212f3f;
 `;
 
 export const Categories = styled.div`
@@ -33,15 +33,16 @@ export const NavBar = styled.nav`
 export const Nav = styled.div`
   margin-top: 37px;
   font-size: 20px;
+  color: white;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`
+`;
 
 export const Logout = styled.div`
   display: grid;
   align-self: end;
-`
+`;

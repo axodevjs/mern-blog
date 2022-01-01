@@ -8,7 +8,7 @@ export const StyledSidebar = styled.div`
   position: sticky; // See link
   top: 0; //to make it stick to the top of the screen
   height: 100vh; // make the height equal to 100 view height
-  background-color: #212F3F;
+  background-color: #212f3f;
 `;
 
 export const Categories = styled.div`

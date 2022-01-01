@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import Input from "../Atoms/Input";
 
 const StyledHeader = styled.header`
@@ -6,14 +6,14 @@ const StyledHeader = styled.header`
   justify-items: center;
   align-content: center;
   grid-area: header;
-`
+`;
 
 const Header = () => {
-    return(
-        <StyledHeader>
-            <Input placeholder={"Search here..."}/>
-        </StyledHeader>
-    )
-}
+  return (
+    <StyledHeader>
+      <Input placeholder={"Search here..."} />
+    </StyledHeader>
+  );
+};
 
 export default Header;
