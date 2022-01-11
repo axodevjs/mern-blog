@@ -1,6 +1,4 @@
-const SHOW_MODAL = "SHOW_MODAL";
-const HIDE_MODAL = "HIDE_MODAL";
-const SET_MODAL = "SET_MODAL";
+import {HIDE_MODAL, SET_MODAL, SHOW_MODAL} from "../types/modalTypes";
 
 const defaultState = {
   show: false,

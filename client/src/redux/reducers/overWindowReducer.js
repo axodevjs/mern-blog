@@ -1,6 +1,4 @@
-const SHOW_WINDOW = "SHOW_WINDOW";
-const HIDE_WINDOW = "HIDE_WINDOW";
-const SET_WINDOW = "SET_WINDOW";
+import {HIDE_WINDOW, SET_WINDOW, SHOW_WINDOW} from "../types/overWindowTypes";
 
 const defaultState = {
   show: false,

@@ -1,6 +1,4 @@
 import * as S from "./Styled";
-import Button from "../../../Atoms/Button";
-import Grid from "../../../Atoms/Grid";
 import { Heading } from "../../../Atoms/Typography";
 
 const Modal = (props) => {

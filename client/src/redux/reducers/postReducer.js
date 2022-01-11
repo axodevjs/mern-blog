@@ -1,8 +1,4 @@
-const SET_POSTS = "SET_POSTS";
-const SET_POST = "SET_POST";
-const ADD_POST = "ADD_POST";
-const DELETE_POST = "DELETE_POST";
-const UPDATE_POST = 'UPDATE_POST';
+import {ADD_POST, DELETE_POST, SET_POST, SET_POSTS, UPDATE_POST} from "../types/postTypes";
 
 const defaultState = {
   posts: [],

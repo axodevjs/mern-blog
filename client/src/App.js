@@ -1,10 +1,10 @@
 import "./App.css";
-import { auth } from "./actions/user";
+import { auth } from "./redux/actions/user";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import routes from "./routes/routes";
 import { useRoutes } from "react-router-dom";
-import { getCategories } from "./actions/category";
+import { getCategories } from "./redux/actions/category";
 
 function App() {
   const isAuth = useSelector((state) => state.user.isAuth);
@@ -15,6 +15,7 @@ function App() {
     dispatch(auth());
     dispatch(getCategories());
   }, []);
+
   return routing;
 }
 

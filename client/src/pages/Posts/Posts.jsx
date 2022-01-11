@@ -2,7 +2,7 @@ import * as S from "./StyledPosts";
 import ShortPost from "./ShortPost/ShortPost";
 import MainLayout from "../../components/Layouts/MainLayout";
 import {useEffect} from "react";
-import {getPosts} from "../../actions/post";
+import {getPosts} from "../../redux/actions/post";
 import {useDispatch, useSelector} from "react-redux";
 
 const Posts = () => {

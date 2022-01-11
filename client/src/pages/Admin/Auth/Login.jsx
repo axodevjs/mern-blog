@@ -4,9 +4,9 @@ import Input from "../../../components/Atoms/Input";
 import Button from "../../../components/Atoms/Button";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { haveAdmin, login } from "../../../actions/user";
+import { haveAdmin, login } from "../../../redux/actions/user";
 import { useNavigate } from "react-router-dom";
-import { store } from "../../../reducers";
+import { store } from "../../../redux/reducers";
 
 const Wrapper = styled.div`
   display: grid;

@@ -3,8 +3,8 @@ import Grid from "../../Atoms/Grid";
 import { useState } from "react";
 import Button from "../../Atoms/Button";
 import { useDispatch } from "react-redux";
-import { hideModal } from "../../../reducers/modalReducer";
-import { createCategory } from "../../../actions/category";
+import { hideModal } from "../../../redux/reducers/modalReducer";
+import { createCategory } from "../../../redux/actions/category";
 
 const AddCategory = (props) => {
   const [name, setName] = useState("");

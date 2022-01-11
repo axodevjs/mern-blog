@@ -1,12 +1,12 @@
 import { CategoryBtn } from "../../../components/Atoms/CategoryBtn";
 import * as S from "./Styled";
-import { setModal, showModal } from "../../../reducers/modalReducer";
+import { setModal, showModal } from "../../../redux/reducers/modalReducer";
 import edit from "../../../assets/images/edit.svg";
 import trash from "../../../assets/images/trash.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { delCategory } from "../../../actions/category";
+import { delCategory } from "../../../redux/actions/category";
 import EditCategory from "../../../components/Admin/Modals/EditCategory";
-import { updateCurrentCategory } from "../../../reducers/categoryReducer";
+import { updateCurrentCategory } from "../../../redux/reducers/categoryReducer";
 
 const Category = (props) => {
   const dispatch = useDispatch();

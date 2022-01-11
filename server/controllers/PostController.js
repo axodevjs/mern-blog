@@ -29,6 +29,15 @@ class PostController {
         }
     }
 
+    async getByCategoryName(req, res) {
+        try {
+            const posts = await PostService.getByCategoryName(req.params.category_name);
+            return res.json(posts)
+        } catch (e) {
+            res.status(500).json(e)
+        }
+    }
+
     async update(req, res) {
         try {
             const updatedPost = await PostService.update(req.body)

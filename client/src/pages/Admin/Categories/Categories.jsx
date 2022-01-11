@@ -3,12 +3,12 @@ import { Heading, Text } from "../../../components/Atoms/Typography";
 import * as S from "../StyledAdmin";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getCategories } from "../../../actions/category";
-import { hideModal, showModal } from "../../../reducers/modalReducer";
+import { getCategories } from "../../../redux/actions/category";
+import { hideModal, showModal } from "../../../redux/reducers/modalReducer";
 import Modal from "../../../components/Admin/Modals/Modal/Modal";
 import AddCategory from "../../../components/Admin/Modals/AddCategory";
 import Category from "./Category";
-import { setModal } from "../../../reducers/modalReducer";
+import { setModal } from "../../../redux/reducers/modalReducer";
 
 const Categories = () => {
   const dispatch = useDispatch();

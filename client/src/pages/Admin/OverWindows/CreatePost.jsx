@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import Input from "../../../components/Atoms/Input";
 import Button from "../../../components/Atoms/Button";
 import Select from "react-select";
-import {createPost} from "../../../actions/post";
+import {createPost} from "../../../redux/actions/post";
 
 const CreatePost = () => {
   const [selectValue, setSelectValue] = useState("");

@@ -4,10 +4,10 @@ import { Heading, Text } from "../../../components/Atoms/Typography";
 import ShortPost from "./ShortPost/ShortPost";
 import OverWindow from "../../../components/Admin/OverWindow/OverWindow";
 import { useDispatch, useSelector } from "react-redux";
-import { showWindow, setWindow } from "../../../reducers/overWindowReducer";
+import { showWindow, setWindow } from "../../../redux/reducers/overWindowReducer";
 import CreatePost from "../OverWindows/CreatePost";
 import { useEffect, useState } from "react";
-import { getPosts } from "../../../actions/post";
+import { getPosts } from "../../../redux/actions/post";
 
 const AdminPosts = () => {
   const dispatch = useDispatch();

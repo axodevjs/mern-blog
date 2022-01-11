@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../config";
+import { API_URL } from "../../config";
 import {addPost, deletePost, setPost, setPosts, updatePost} from "../reducers/postReducer";
 import { hideLoader, showLoader } from "../reducers/appReducer";
 
@@ -48,7 +48,7 @@ export function createPost(data) {
 export function delPost(id) {
   return async (dispatch) => {
     try {
-      const response = await axios.delete(`${API_URL}api/posts/${id}`, {
+      await axios.delete(`${API_URL}api/posts/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       dispatch(deletePost(id));
@@ -61,7 +61,7 @@ export function delPost(id) {
 export function putPost(data) {
   return async (dispatch) => {
     try {
-      const response = await axios.put(`${API_URL}api/posts`, data, {
+      await axios.put(`${API_URL}api/posts`, data, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       dispatch(updatePost(data));

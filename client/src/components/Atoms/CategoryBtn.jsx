@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {device} from "../../helpers/styled_consts";
 
 const StyledCategoryBtn = styled.button`
   align-self: ${({ align }) => align || "stretch"};
@@ -13,6 +14,10 @@ const StyledCategoryBtn = styled.button`
   padding: 4px 19px;
   border-radius: 5px;
   cursor: pointer;
+  
+  @media ${device.mobileS} {
+    font-size: 15px;
+  }
 `;
 
 export const CategoryBtn = (props) => {

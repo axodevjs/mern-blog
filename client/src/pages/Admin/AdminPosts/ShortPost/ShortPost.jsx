@@ -5,9 +5,9 @@ import {Text} from "../../../../components/Atoms/Typography";
 import Grid from "../../../../components/Atoms/Grid";
 import Button from "../../../../components/Atoms/Button";
 import {useDispatch, useSelector} from "react-redux";
-import {delPost} from "../../../../actions/post";
-import {updateCurrentCategory} from "../../../../reducers/categoryReducer";
-import {setWindow, showWindow} from "../../../../reducers/overWindowReducer";
+import {delPost} from "../../../../redux/actions/post";
+import {updateCurrentCategory} from "../../../../redux/reducers/categoryReducer";
+import {setWindow, showWindow} from "../../../../redux/reducers/overWindowReducer";
 import EditPost from "../../OverWindows/EditPost";
 
 const ShortPost = (props) => {

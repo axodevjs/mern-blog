@@ -3,7 +3,7 @@ import {Link, useParams} from "react-router-dom";
 import { Text } from "../../components/Atoms/Typography";
 import MainLayout from "../../components/Layouts/MainLayout";
 import {useEffect} from "react";
-import {getOnePost, getPosts} from "../../actions/post";
+import {getOnePost, getPosts} from "../../redux/actions/post";
 import {useDispatch, useSelector} from "react-redux";
 
 function Post() {

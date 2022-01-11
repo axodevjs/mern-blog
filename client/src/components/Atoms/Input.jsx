@@ -5,6 +5,7 @@ const StyledSearch = styled.input`
   padding: 10px 15px;
   background: none;
   border: 1px solid #acadbc;
+  width: ${({ width }) => width || ''};
   color: #ffffff;
   font-size: 16px;
   border-radius: 6px;

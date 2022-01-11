@@ -4,7 +4,7 @@ import Input from "../../../components/Atoms/Input";
 import Button from "../../../components/Atoms/Button";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { haveAdmin, login, registration } from "../../../actions/user";
+import { haveAdmin, login, registration } from "../../../redux/actions/user";
 import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`

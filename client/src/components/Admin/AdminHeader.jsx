@@ -6,7 +6,7 @@ import {showOverlay, showSidebar} from "../../redux/reducers/appReducer";
 import {device} from "../../helpers/styled_consts";
 
 const StyledHeader = styled.header`
-  padding: 0 40px 0 40px;
+  padding: 20px 40px 0 40px;
   align-content: center;
   grid-area: header;
   
@@ -18,10 +18,10 @@ const StyledHeader = styled.header`
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: start;
 `;
 
-const Header = () => {
+const AdminHeader = () => {
     const dispatch = useDispatch();
 
     const menuHandler = (e) => {
@@ -56,7 +56,6 @@ const Header = () => {
                         />
                     </svg>
                 </Grid>
-                <Input className={"search"} width={"250px"} placeholder={"Search here..."}/>
                 <div/>
             </Wrapper>
 
@@ -64,4 +63,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default AdminHeader;

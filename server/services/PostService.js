@@ -1,4 +1,5 @@
 import Post from "../models/Post.js";
+import Category from "../models/Category.js";
 
 class PostService {
     async create(post) {
@@ -9,6 +10,16 @@ class PostService {
     async getAll() {
         const posts = await Post.find();
         return posts;
+    }
+
+    async getByCategoryName(category_name) {
+        if (!category_name) {
+            throw new Error("category name not specified")
+        }
+        const category = await Category.findOne({category_name});
+
+        return category
+
     }
 
     async getOne(id) {
