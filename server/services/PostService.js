@@ -16,10 +16,10 @@ class PostService {
         if (!category_name) {
             throw new Error("category name not specified")
         }
-        const category = await Category.findOne({category_name});
+        const category = await Category.find({name: category_name});
+        const post = await Post.find({category_id: category[0]._id});
 
-        return category
-
+        return post
     }
 
     async getOne(id) {

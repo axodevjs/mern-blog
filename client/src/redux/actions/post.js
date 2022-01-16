@@ -17,6 +17,20 @@ export const getPosts = () => {
   };
 };
 
+export const getPostsbyCategory = (category_name) => {
+  return async (dispatch) => {
+    try {
+      dispatch(showLoader());
+      const response = await axios.get(`${API_URL}api/posts/categories/${category_name}`);
+      dispatch(setPosts(response.data));
+    } catch (e) {
+      console.log(e);
+    } finally {
+      dispatch(hideLoader());
+    }
+  };
+};
+
 export const getOnePost = (id) => {
   return async (dispatch) => {
     try {

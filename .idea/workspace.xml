@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd4038f-4a62-40dd-bd6d-475cc1978fae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Admin/AdminSidebar/AdminSidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Admin/AdminSidebar/AdminSidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Admin/Modals/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Admin/Modals/Modal/Modal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layouts/MainLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layouts/MainLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Molecules/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Molecules/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +34,7 @@
       <option name="presentableId" value="Default" />
       <updated>1641666553632</updated>
       <workItem from="1641666578780" duration="33000" />
+      <workItem from="1641908261965" duration="1030000" />
     </task>
     <servers />
   </component>

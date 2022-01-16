@@ -1,18 +1,25 @@
 import * as S from "./StyledPosts";
 import ShortPost from "./ShortPost/ShortPost";
 import MainLayout from "../../components/Layouts/MainLayout";
-import {useEffect} from "react";
-import {getPosts} from "../../redux/actions/post";
-import {useDispatch, useSelector} from "react-redux";
+import { useEffect } from "react";
+import { getPosts, getPostsbyCategory } from "../../redux/actions/post";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { Heading } from "components/Atoms/Typography";
 
 const Posts = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts.posts);
   const categories = useSelector((state) => state.category.categories);
   const loader = useSelector((state) => state.app.loader);
+  const params = useParams();
 
   useEffect(() => {
-    dispatch(getPosts());
+    if (params.category_name === undefined) {
+      dispatch(getPosts());
+    } else {
+      dispatch(getPostsbyCategory(params.category_name))
+    }
   }, []);
 
   if (loader) {
@@ -22,9 +29,13 @@ const Posts = () => {
   return (
     <MainLayout>
       <S.Posts>
-        {posts.map(post => {
+        { params.category_name && (
+          <Heading level={2} padding={"0 0 50px 0"}>Posts in the {params.category_name} category</Heading>
+        )}
+
+        {posts.map((post) => {
           const category = categories.filter(
-              (category) => category._id === post.category_id
+            (category) => category._id === post.category_id
           );
 
           if (post.content.length >= 255) {
@@ -33,7 +44,7 @@ const Posts = () => {
           }
 
           return (
-              <ShortPost key={post._id} category={category[0]} post={post} />
+            <ShortPost key={post._id} category={category[0]} post={post} />
           );
         })}
       </S.Posts>

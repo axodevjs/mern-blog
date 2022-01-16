@@ -10,6 +10,7 @@ import Categories from "../pages/Admin/Categories/Categories";
 const routes = (isLoggedIn) => [
   { path: "/", element: <Navigate to={"/posts"} /> },
   { path: "/posts", element: <Posts /> },
+  { path: "/posts/categories/:category_name", element: <Posts /> },
   { path: "/posts/:postId", element: <Post /> },
   { path: "*", element: <Page404 /> },
 

@@ -37,6 +37,7 @@ const Sidebar = () => {
               css`
                 transform: translateX(0) !important;
               `
+
       }
     `;
 
@@ -56,8 +57,9 @@ const Sidebar = () => {
             </Text>
             <Categories>
                 {categories.map((category) => (
-                    <CategoryBtn key={category._id} background={category.background}
-                                 color={category.color}>{category.name}</CategoryBtn>
+                    <a key={category._id} href={'/posts/categories/' + category.name}>
+                      <CategoryBtn background={category.background} color={category.color}>{category.name}</CategoryBtn>
+                    </a>
                 ))}
             </Categories>
         </StyledSidebar>
